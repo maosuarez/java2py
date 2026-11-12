@@ -1,0 +1,51 @@
+{
+  "id": "heap-binario",
+  "nombre": "Heap binario (min-heap)",
+  "archivo": "MinHeap.java",
+  "categoria": "estructuras",
+  "alias": [
+    "min heap",
+    "monticulo",
+    "monticulo binario",
+    "cola de prioridad",
+    "priority queue",
+    "heap"
+  ],
+  "etiquetas": [
+    "prioridad",
+    "minimo",
+    "arbol completo",
+    "arreglo",
+    "subir",
+    "bajar",
+    "heapsort"
+  ],
+  "resumen": "Árbol binario completo guardado en un arreglo donde cada padre es menor o igual que sus hijos.",
+  "descripcion": "El mínimo siempre está en la posición 0. Insertar coloca el valor al final y lo hace subir; extraer el mínimo mueve el último a la raíz y lo hace bajar. Los hijos del índice i están en 2i+1 y 2i+2, y su padre en (i-1)/2. Es la base de las colas de prioridad, de Dijkstra y de heapsort.",
+  "complejidad": {
+    "tiempo": {
+      "insertar": "O(log n)",
+      "extraer minimo": "O(log n)",
+      "ver minimo": "O(1)"
+    },
+    "espacio": "O(n)"
+  },
+  "cuando_usar": [
+    "obtener repetidamente el menor (o mayor) elemento",
+    "colas de prioridad, planificadores, top-k",
+    "Dijkstra y Prim"
+  ],
+  "ventajas": [
+    "sin punteros, cabe en un arreglo",
+    "inserción y extracción logarítmicas"
+  ],
+  "desventajas": [
+    "buscar un elemento arbitrario es O(n)"
+  ],
+  "relacionados": [
+    "dijkstra",
+    "quicksort",
+    "pila"
+  ],
+  "python_estandar": "heapq (heappush / heappop)"
+}

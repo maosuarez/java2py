@@ -1,0 +1,44 @@
+{
+  "id": "dijkstra",
+  "nombre": "Dijkstra (caminos más cortos)",
+  "archivo": "Dijkstra.java",
+  "categoria": "grafos",
+  "alias": [
+    "camino mas corto",
+    "ruta mas corta",
+    "shortest path",
+    "distancias minimas"
+  ],
+  "etiquetas": [
+    "grafo",
+    "pesos no negativos",
+    "cola de prioridad",
+    "voraz",
+    "greedy",
+    "rutas"
+  ],
+  "resumen": "Calcula la distancia mínima desde un nodo a todos los demás en un grafo con pesos no negativos.",
+  "descripcion": "Saca de una cola de prioridad el nodo con menor distancia conocida y relaja sus aristas: si pasando por él se llega más barato a un vecino, actualiza la distancia y lo encola. Las entradas viejas de la cola se descartan al salir (si su distancia ya no es la mejor). No funciona con pesos negativos; para eso existe Bellman-Ford.",
+  "complejidad": {
+    "tiempo": {
+      "con heap binario": "O((V + E) log V)"
+    },
+    "espacio": "O(V + E)"
+  },
+  "cuando_usar": [
+    "rutas mínimas en mapas o redes con costos positivos",
+    "como base de A*"
+  ],
+  "ventajas": [
+    "eficiente con heap",
+    "da todas las distancias desde el origen"
+  ],
+  "desventajas": [
+    "no admite pesos negativos"
+  ],
+  "relacionados": [
+    "heap-binario",
+    "pila"
+  ],
+  "python_estandar": "heapq para la cola de prioridad"
+}

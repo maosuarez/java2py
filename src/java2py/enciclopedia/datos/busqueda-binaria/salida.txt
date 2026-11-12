@@ -1,0 +1,4 @@
+buscar 13 -> 5
+buscar 4 -> -1
+cotaInferior 4 -> 2
+cotaInferior 20 -> 8

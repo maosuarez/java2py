@@ -1,0 +1,47 @@
+{
+  "id": "quicksort",
+  "nombre": "Quicksort",
+  "archivo": "QuickSort.java",
+  "categoria": "ordenamiento",
+  "alias": [
+    "quick sort",
+    "ordenamiento rapido",
+    "particion de lomuto",
+    "lomuto"
+  ],
+  "etiquetas": [
+    "ordenar",
+    "divide y venceras",
+    "in-place",
+    "recursivo",
+    "pivote",
+    "no estable"
+  ],
+  "resumen": "Ordena eligiendo un pivote, partiendo el arreglo en menores y mayores, y repitiendo en cada parte.",
+  "descripcion": "Toma un pivote (aquí, el último elemento), mueve a su izquierda los menores y a su derecha el resto (partición de Lomuto) y ordena recursivamente las dos mitades. Ordena en el mismo arreglo. Con pivote fijo y datos ya ordenados cae en el peor caso; en la práctica se elige el pivote al azar o con mediana de tres.",
+  "complejidad": {
+    "tiempo": {
+      "mejor": "O(n log n)",
+      "promedio": "O(n log n)",
+      "peor": "O(n²)"
+    },
+    "espacio": "O(log n) (pila de recursión)"
+  },
+  "cuando_usar": [
+    "ordenar arreglos en memoria cuando no importa la estabilidad",
+    "cuando se quiere ordenar sin memoria extra"
+  ],
+  "ventajas": [
+    "muy rápido en la práctica",
+    "in-place"
+  ],
+  "desventajas": [
+    "peor caso cuadrático",
+    "no es estable"
+  ],
+  "relacionados": [
+    "busqueda-binaria",
+    "heap-binario"
+  ],
+  "python_estandar": "sorted() / list.sort() (Timsort, estable)"
+}

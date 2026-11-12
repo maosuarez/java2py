@@ -1,0 +1,7 @@
+tamano: 5
+cima: 50
+desapilo 50
+desapilo 40
+desapilo 30
+desapilo 20
+desapilo 10

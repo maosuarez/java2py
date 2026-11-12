@@ -8,5 +8,5 @@
 
 from .translator import TranslationResult, translate, translate_detailed, translate_file
 
-__version__ = "0.1.0"
+__version__ = "0.2.0"
 __all__ = ["translate", "translate_detailed", "translate_file", "TranslationResult", "__version__"]

@@ -1,0 +1,48 @@
+{
+  "id": "pila",
+  "nombre": "Pila",
+  "archivo": "Pila.java",
+  "categoria": "estructuras",
+  "alias": [
+    "stack",
+    "lifo",
+    "pila con arreglo",
+    "arreglo dinamico"
+  ],
+  "etiquetas": [
+    "lifo",
+    "apilar",
+    "desapilar",
+    "push",
+    "pop",
+    "arreglo redimensionable",
+    "amortizado"
+  ],
+  "resumen": "Colección LIFO: el último elemento que entra es el primero que sale.",
+  "descripcion": "Implementada sobre un arreglo que duplica su capacidad cuando se llena, así que apilar cuesta O(1) amortizado. Se usa para deshacer acciones, evaluar expresiones, validar paréntesis, recorrer en profundidad (DFS) sin recursión y simular la pila de llamadas.",
+  "complejidad": {
+    "tiempo": {
+      "apilar": "O(1) amortizado",
+      "desapilar": "O(1)",
+      "cima": "O(1)"
+    },
+    "espacio": "O(n)"
+  },
+  "cuando_usar": [
+    "procesar en orden inverso a la llegada",
+    "DFS iterativo",
+    "paréntesis balanceados y evaluación de expresiones"
+  ],
+  "ventajas": [
+    "operaciones O(1)",
+    "muy simple"
+  ],
+  "desventajas": [
+    "solo se accede a la cima"
+  ],
+  "relacionados": [
+    "heap-binario",
+    "dijkstra"
+  ],
+  "python_estandar": "list (append / pop) o collections.deque"
+}

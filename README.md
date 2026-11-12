@@ -100,6 +100,41 @@ if __name__ == "__main__":
     Busqueda.main(sys.argv[1:])
 ```
 
+## Enciclopedia de algoritmos y estructuras
+
+La librería trae una enciclopedia consultable: cada entrada tiene su ficha (qué es, complejidad,
+cuándo usarla, ventajas, equivalente en la librería estándar de Python) y el código completo en
+Java y en Python. Todo viene dentro del paquete, sin descargas ni dependencias extra.
+
+```bash
+java2py-enc buscar camino mas corto     # búsqueda por palabras clave (tolera tildes y errores)
+java2py-enc ver dijkstra                # ficha + Python + salida del ejemplo
+java2py-enc ver heap --lang ambos       # también el Java original
+java2py-enc listar                      # índice por categorías
+java2py-enc comparar quicksort heap     # tabla de complejidades
+java2py-enc ejecutar pila               # corre el ejemplo
+java2py-enc guardar dijkstra -o d.py    # guarda el código (.java para el original)
+java2py-enc dijkstra                    # atajo: abre la entrada o busca si no existe
+```
+
+```python
+from java2py import enciclopedia as enc
+
+for r in enc.buscar("cola de prioridad"):
+    print(r.entrada.id, r.entrada.resumen)
+
+heap = enc.obtener("monticulo")      # por id, nombre o alias
+print(heap.complejidad, heap.python)
+```
+
+El Python de cada entrada lo genera el propio traductor, y los tests comprueban que su salida
+coincide con la del Java, así que la enciclopedia también funciona como banco de pruebas.
+
+**Agregar una entrada:** crea `src/java2py/enciclopedia/datos/<id>/` con el `.java` (con un
+`main` de ejemplo), `entrada.json` (copia el formato de otra entrada) y `salida.txt`, que es la
+salida real de `java <Clase>`. Luego corre `pytest`. Las implementaciones tienen que ser propias,
+no copiadas de un libro.
+
 ## Qué traduce
 
 | Java | Python |

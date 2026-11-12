@@ -1,0 +1,47 @@
+{
+  "id": "busqueda-binaria",
+  "nombre": "Búsqueda binaria",
+  "archivo": "BusquedaBinaria.java",
+  "categoria": "busqueda",
+  "alias": [
+    "binary search",
+    "busqueda dicotomica",
+    "lower bound",
+    "cota inferior",
+    "bisect"
+  ],
+  "etiquetas": [
+    "arreglo ordenado",
+    "divide y venceras",
+    "indice",
+    "logaritmico"
+  ],
+  "resumen": "Encuentra un valor en un arreglo ordenado descartando la mitad del rango en cada paso.",
+  "descripcion": "Mantiene un rango [lo, hi] donde puede estar el objetivo y lo compara con el elemento del medio: si es menor, el objetivo está a la derecha; si es mayor, a la izquierda. Incluye la variante de cota inferior (primer índice con valor >= objetivo), que sirve para insertar manteniendo el orden. Usa mid = lo + (hi - lo) / 2 para evitar desbordamiento en Java.",
+  "complejidad": {
+    "tiempo": {
+      "mejor": "O(1)",
+      "promedio": "O(log n)",
+      "peor": "O(log n)"
+    },
+    "espacio": "O(1)"
+  },
+  "cuando_usar": [
+    "los datos ya están ordenados y se consultan muchas veces",
+    "buscar el primer o último valor que cumple una condición monótona",
+    "búsqueda sobre la respuesta (p. ej. capacidad mínima)"
+  ],
+  "ventajas": [
+    "muy rápida",
+    "no usa memoria extra"
+  ],
+  "desventajas": [
+    "exige datos ordenados",
+    "acceso aleatorio: no sirve en listas enlazadas"
+  ],
+  "relacionados": [
+    "quicksort",
+    "heap-binario"
+  ],
+  "python_estandar": "bisect.bisect_left / bisect.bisect_right"
+}
